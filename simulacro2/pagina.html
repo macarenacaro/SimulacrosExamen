@@ -5,32 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        EMPLEADOS --LISTADO---
+        CLIENTES --LISTADO---
     </title>
-    <link rel="stylesheet" type="text/css" href="css/estilos.css" media="screen" />
 </head>
 
 <body>
     <div id="aplicacion">
         <div id="controlesprincipales">
-            <button type="button" id="anyadeEmpleForm">
-                Añadir Empleado
+            
+            <button type="button" id="anyadeCli">
+              Añadir Cliente
+            </button>
+            <button type="button" id="anyadeCliForm">
+                Añadir Cliente con Formulario
               </button>
+
               <br><br>
 
           </div>
 
-            <div id="divEmple">
-            </div>
-            <!-- <div id="divClientes">
-            </div> -->
+        <div id="listado">
+        </div>
     </div>
 
     <!--
-             TODO: Cargar el script examen.js
+             TODO: Cargar el script examen.js como un módulo
 
         -->
-        <script src="/js/examen.js" type="module"></script>
+        <script src="examen.js" type="module"></script>
     
     <template id="formulario-template">
         <form>
@@ -39,11 +41,11 @@
                 <input type="text" name="nombre" id="nombre">
             </div>
             <div class="form-control">
-                <label for="apellidos">apellidos</label>
+                <label for="apellidos">Apellidos</label>
                 <input type="text" name="apellidos" id="apellidos">
             </div>
             <div class="form-control">
-                <label for="nif">Nif</label>
+                <label for="nif">NIF</label>
                 <input type="text" name="nif" id="nif">
             </div>
             <div class="form-control">
@@ -51,16 +53,12 @@
                 <input type="text" name="edad" id="edad">
             </div>
             <div class="form-control">
-                <label for="puesto">Puesto</label>
-                <input type="text" name="puesto" id="puesto">
+                <label for="fecAlta">Fec. Alta</label>
+                <input type="text" name="fecAlta" id="fecAlta">
             </div>
             <div class="form-control">
-                <label for="salario">Salario</label>
-                <input type="text" name="salario" id="salario">
-            </div>
-            <div class="form-control">
-                <label for="antigüedad">Antigüedad</label>
-                <input type="text" name="antigüedad" id="antigüedad">
+                <label for="tipCli">Tipo de cliente</label>
+                <input type="text" name="tipCli" id="tipCli">
             </div>
             <br>
 

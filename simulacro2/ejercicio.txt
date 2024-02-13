@@ -1,0 +1,87 @@
+SIMULACRO 2 2ª EVALUACIÓN
+Crea un archivo llamado examen.js:
+
+1. (1 punto) Crea la función constructora del tipo de objeto Persona (función constructora objeto Persona)
+
+Sus propiedades son los nombres en minúsculas en negrita:
+
+-nombre, cadena
+
+-apellidos, cadena
+
+-nif, cadena
+
+-edad, número
+
+
+
+
+2. (1 punto) Crear otro tipo de objeto (función constructora Cliente), que hereda todo del objeto Persona (prototipos) añadiendo las propiedades:
+
+-fechaAlta, almacena un timestamp (número).  A la función constructora se le pasa un string que se debe convertir con date.parse a timestamp
+
+-tipoCliente, string
+
+
+
+2. (1 punto) Crear la función anyadirCliente() de un sólo parámetro que insertará en un array global de clientes el cliente en cuestión anyadiéndole una propiedad id.
+
+id se corresponderá con una variable global llamada idCliente.
+
+
+
+3. (1 punto) Función muestraWeb():
+
+Mostrará un título h1 centrado con el texto "Listado de  Clientes" que cuelga del div con id de la página "listado"
+
+
+Una lista ordenada para todos los clientes, y un li para cada uno de ellos
+
+Dentro del li habrá un div del que colgarán todas las propiedades en elementos p.
+
+Ejemplo:
+
+
+
+
+4. (1 punto) Función muestraCliente. Con un parámetro que es el cliente a mostrar. 
+
+Dentro de ella se puede crear la estructura de cada li, y cada div y los p asociados a un cliente.
+
+Además de los botones Editar y Borrar.
+
+
+
+5. (2 puntos) Función EditarHandleFormulario(),  función manejadora que se asociará a cada botón de edición de los clientes.  Serán funciones constructoras de un objeto manejador de eventos
+
+
+
+6. (1 punto) Función BorrarHandleFormulario(), función manejadora que se asociará a cada botón de borrar de los clientes. Serán funciones constructoras de un objeto manejador de eventos
+
+Las funciones 5 y 6  deben llevar asociadas otras que manejen un submit del formulario y un cancel. El formulario está como template en el html.
+
+
+
+7.(1 punto) Función anyademe: (1Función no constructora asociada al botón del html con id anyadeCli, que insertará un cliente mediante prompts.
+
+
+
+8. (1 punto) Función anyadirClienteFormulario. Igual que la anterior pero con el formulario. No constructora.
+
+
+
+
+//**// Todas las funciones de formulario para editar o anyadir controlarán que la fecha de alta sea timestamp internamente en el objeto cliente.
+
+Ese timestap tendrá que ser convertido a objeto Date de javascript, y aplicarle toLocaleDateString(); para poder ver correctamente las fechas.
+
+En caso de que la fecha sea no válida se pondrá la fecha actual con Date.now();
+
+
+Crea estos clientes:
+
+
+let cli1 = new Cliente("Juan", "Pérez", "12345678A", 30, "1-1-2019", "Premium");
+let cli2 = new Cliente("Ana", "García", "87654321B", 25, "2-2-2019", "Normal");
+Anyádelos al array con la función anyadirCliente para que les cree el id.
+y ejecuta muestraWeb() para que se vea la aplicación.
